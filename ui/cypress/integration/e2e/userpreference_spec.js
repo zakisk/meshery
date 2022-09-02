@@ -6,7 +6,8 @@ describe('User Preferences', () => {
       cy.selectProviderNone();
 
       cy.visit('/user/preferences');
-      cy.get('.MuiFormLabel-root').should('have.text', 'Analytics and Improvement Program');
+      cy.get(':nth-child(1) > .MuiFormControl-root > .MuiFormLabel-root').should('have.text', 'Extensions');
+      cy.get(':nth-child(2) > .MuiFormControl-root > .MuiFormLabel-root').should('have.text', 'Analytics and Improvement Program');
       cy.wait('@getUserStats');
     });
 
