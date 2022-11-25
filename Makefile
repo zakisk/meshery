@@ -115,7 +115,6 @@ server-remote-provider: dep-check
 	APP_PATH=$(APPLICATIONCONFIGPATH) \
 	go run main.go error.go;
 
-
 server-local-provider: dep-check
 	cd server; cd cmd; go mod tidy; \
 	BUILD="$(GIT_VERSION)" \
